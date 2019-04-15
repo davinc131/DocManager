@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Control;
 
 namespace DocManager
 {
@@ -20,9 +21,27 @@ namespace DocManager
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private Converter controlConverter;
+
         public MainWindow()
         {
             InitializeComponent();
+            controlConverter = new Converter();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                TextRange range = new TextRange(mainRTB.Document.ContentStart, mainRTB.Document.ContentEnd);
+                range = controlConverter.ConverterRtfToHtml(range);
+                MessageBox.Show("Content Conversion Complete!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

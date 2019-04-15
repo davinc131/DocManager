@@ -11,6 +11,11 @@ namespace Model
         public int Id { get; set; }
         public string Titulo { get; set; }
         public string ConteudoDocumento { get; set; }
-        public List<Documento> ListaDocumentos { get; set; }
+        public ICollection<Documento> ListaDocumentos { get; set; }
+
+        public Documento()
+        {
+            ListaDocumentos = new List<Documento>();
+        }
     }
 }

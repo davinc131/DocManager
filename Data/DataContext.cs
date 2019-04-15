@@ -11,12 +11,12 @@ namespace Data
 {
     public class DataContext:DbContext
     {
-        public DataContext() : base(@"data source=localhost/sqlexpress; Initial Catalog=ContatoDb; User Id=sa; Password=sipef@adm; integrated security=false;")
+        public DataContext() : base(@"data source=localhost/sqlexpress; Initial Catalog=DocManager; User Id=leonardo; Password=123456; integrated security=false;")
         {
             //sqlservr  || @"data source=192.168.25.248\sqlexpress; Initial Catalog=ContatoDb; User Id=sa; Password=Sipefadm1; integrated security=true;"
         }
 
-        public DbSet<Documento> Contatos { get; set; }
+        public DbSet<Documento> Documentos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

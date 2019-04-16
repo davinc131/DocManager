@@ -18,10 +18,11 @@ namespace Control
             markupConverter = new Util.MarkupConverter();
         }
 
-        public void ConverterRtfToHtml(TextRange text)
+        public string ConverterRtfToHtml(TextRange text)
         {
             string t = "";
             t = markupConverter.ConvertRtfToHtml(t);
+            return t;
         }
     }
 }

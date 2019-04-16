@@ -36,7 +36,7 @@ namespace Util
                     xamlMemoryStream.Seek(0, SeekOrigin.Begin);
 
                     //Load the MemoryStream into TextRange ranging from start to end of RichTextBox.
-                    textRange.Load(xamlMemoryStream, DateFormat.Xaml);
+                    textRange.Load(xamlMemoryStream, DataFormats.Xaml);
                 }
             }
 
@@ -44,7 +44,7 @@ namespace Util
             {
 
                 textRange = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd);
-                textRange.Save(rtfMemoryStream, IDataFormat.Rtf);
+                textRange.Save(rtfMemoryStream, DataFormats.Rtf);
                 rtfMemoryStream.Seek(0, SeekOrigin.Begin);
                 using (var rtfStreamReader = new StreamReader(rtfMemoryStream))
                 {

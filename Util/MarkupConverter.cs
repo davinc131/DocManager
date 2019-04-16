@@ -10,7 +10,8 @@ namespace Util
     {
         public string ConvertXamlToHtml(string xamlText)
         {
-            return HtmlToXamlConverter.ConvertXamlToHtml(xamlText, false);
+            //return HtmlToXamlConverter.ConvertXamlToHtml(xamlText, false);
+            return HtmlToXamlConverter.ConvertHtmlToXaml(xamlText, false);
         }
 
         public string ConvertHtmlToXaml(string htmlText)

@@ -35,7 +35,8 @@ namespace DocManager
             try
             {
                 TextRange range = new TextRange(mainRTB.Document.ContentStart, mainRTB.Document.ContentEnd);
-                range = controlConverter.ConverterRtfToHtml(range);
+                string s = "";
+                //range = controlConverter.ConverterRtfToHtml(range);
                 MessageBox.Show("Content Conversion Complete!");
             }
             catch (Exception ex)

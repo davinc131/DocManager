@@ -15,7 +15,7 @@ namespace Util
         {
             var xamlText = string.Format(FlowDocumentFormat, ConvertRtfToXaml(rtfText));
 
-            return HtmlFromXamlConverter.ConvertXamlToHtml(xamlText, false);
+            return HtmlFromXamlConverter.ConvertXamlToHtml(xamlText);
         }
 
         private static string ConvertRtfToXaml(string rtfText)
